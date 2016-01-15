@@ -1,14 +1,24 @@
 var gulp = require('gulp'),
-	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename');
+    dest = require('gulp-dest'),
+    browserify = require('browserify'),
+    babelify = require('babelify'),
+    connect = require('gulp-connect'),
+    source = require('vinyl-source-stream');
 
-gulp.task('js', function() {
-  gulp.src('compiled/*.js')
-    .pipe(concat('build.js'))
-    .pipe(uglify())
-    .pipe(rename('build.min.js'))
-    .pipe(gulp.dest('release/'))
+gulp.task('connect', function() {
+  connect.server();
 });
 
-gulp.task('default', ['js']);
+gulp.task('build', function () {
+    browserify({
+        entries: 'js/index.jsx',
+        extensions: ['.jsx'],
+        debug: true
+    })
+    .transform(babelify.configure({presets: ["es2015", "react"]}))
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', ['build', 'connect']);
