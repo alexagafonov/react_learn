@@ -1,16 +1,17 @@
 'use strict';
 
 import React, { Component } from 'react';
-import FriendsList from './FriendsList';
-import Brands from './Brands';
+import Ul from './Ul';
 
 class Tabs extends Component {
     render() {
-        return  <ul>
-                    <FriendsList />
-                    <Brands />
-                </ul>;
-  }
+        return (
+            <div className='tabs'>
+                <Ul list={this.props.children} />
+                {this.props.children}
+            </div>
+        );
+    }
 }
 
 export default Tabs;

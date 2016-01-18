@@ -1,13 +1,15 @@
 'use strict';
 
 import React, { Component } from 'react';
-import Slct from './Slct';
+import Select from './Select';
 
 class Brands extends Component {
-  render() {
-    return <li>
-              <Slct list={["Audi","BMW","Dodge","Ford","Nissan"]} />
-            </li>;
+    render() {
+        return (
+        	<div className='tab'>
+                 <Select list={["Audi","BMW","Dodge","Ford","Nissan"]} />
+            </div>
+        );
   }
 }
 
