@@ -6,11 +6,9 @@ import Select from './Select';
 class Brands extends Component {
     render() {
         return (
-        	<div className='tab'>
-                 <Select list={["Audi","BMW","Dodge","Ford","Nissan"]} />
-            </div>
+            <Select list={["Audi","BMW","Dodge","Ford","Nissan"]} />
         );
-  }
+    }
 }
 
 export default Brands;

@@ -1,0 +1,38 @@
+.tabs__header {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.tabs__header li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 10px;
+    background: #eeeeee;
+    cursor: pointer;
+}
+.tabs__header li:hover {
+    background: #ccc;
+}
+.tabs__header li.current {
+    background: #ccc;
+}
+.tab__content {
+    display: none;
+    border: 1px solid #ccc;
+    width: 419px;
+    padding: 20px;
+}
+.current .tab__content {
+    display: block;
+}
+.tab__form span {
+    display: inline-block;
+    vertical-align: top;
+    width: 145px;
+}
+.tab__form input {
+    margin: 0px 10px 10px 10px;
+}
+.tab__content select {
+    width: 270px;
+}
