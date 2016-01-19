@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class Button extends Component {
     render() {
         return (
-            <button>{this.props.txt}</button>
+            <button onClick={this.props.onClick}>{this.props.txt}</button>
         );
     }
 }
