@@ -36,3 +36,10 @@
 .tab__content select {
     width: 270px;
 }
+.friend__name {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    width: 180px;
+    border-bottom: 1px solid #ccc;
+}

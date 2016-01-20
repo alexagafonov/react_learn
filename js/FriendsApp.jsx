@@ -3,15 +3,12 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import Button from './Button';
+import FriendsList from './FriendsList';
 
 class FriendsApp extends Component {
     constructor(props) {
         super(props);
         this.state = {items: [], text: ''};
-        this.handleAdd = this.handleAdd.bind(this);
-        this.onChange = this.onChange.bind(this);
-        this.filterApply = this.filterApply.bind(this);
-        this.onChangeFilter = this.onChangeFilter.bind(this);
     }
 
     onChange(e) {
@@ -51,14 +48,5 @@ class FriendsApp extends Component {
         )
     }
 }
-
-var FriendsList = React.createClass({
-    render() {
-        var createItem = function(item) {
-            return <li key={item.id}>{item.text}</li>;
-        };
-        return <ul>{this.props.items.map(createItem)}</ul>;
-    }
-});
 
 export default FriendsApp;
