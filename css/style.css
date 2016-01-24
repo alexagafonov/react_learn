@@ -43,3 +43,25 @@
     width: 180px;
     border-bottom: 1px solid #ccc;
 }
+.edit .friend__name {
+    display: none;
+}
+.editfield {
+    display: none;
+    vertical-align: top;
+    margin-bottom: 10px;
+    width: 169px;
+    border-bottom: 1px solid #ccc;
+}
+.edit .editfield {
+    display: inline-block;
+}
+.savebtn {
+    display: none;
+}
+.edit .savebtn {
+    display: inline;
+}
+.edit .editbtn {
+    display: none;
+}
