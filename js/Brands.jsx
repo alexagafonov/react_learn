@@ -6,7 +6,7 @@ import Select from './Select';
 class Brands extends Component {
     render() {
         return (
-            <Select list={["Audi","BMW","Dodge","Ford","Nissan"]} />
+            <Select list={['Audi', 'BMW', 'Dodge', 'Ford', 'Nissan']} />
         );
     }
 }

@@ -6,9 +6,9 @@ class Select extends Component {
     render() {
         return (
             <select>
-                {this.props.list.map((optionValue, i) => {
-                    return <option key={i}>{optionValue}</option>;
-                })}
+                {this.props.list.map((optionValue, i) =>
+                    <option key={i}>{optionValue}</option>
+                )}
             </select>
         );
     }

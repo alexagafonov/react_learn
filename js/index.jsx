@@ -11,7 +11,7 @@ const mountNode = document.getElementById('root');
 
 
 ReactDOM.render(
-    <Tabs headers={['Header1','Header2','Header3']}>
+    <Tabs headers={['Header1', 'Header2', 'Header3']}>
         <FriendsApp />
         <Brands />
         <Menu />

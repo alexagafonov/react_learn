@@ -7,13 +7,17 @@ class TabItem extends Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
-    handleClick(e){
+
+    handleClick(e) {
         e.preventDefault();
         this.props.handleClick();
     }
+
     render() {
         return (
-            <li onClick={this.handleClick} className={this.props.isCurrent ? 'current' : null}>{this.props.children}</li>
+            <li onClick={this.handleClick} c
+                lassName={this.props.isCurrent ? 'current' : null}>{this.props.children}
+            </li>
         );
     }
 }

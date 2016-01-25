@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": "eslint:recommended",
+    "extends": "airbnb",
     "ecmaFeatures": {
         "arrowFunctions": true,
         "classes": true,
@@ -11,6 +11,7 @@ module.exports = {
     },
     "rules": {
         "strict": 0,
-        "no-unused-vars": 0
+        "no-unused-vars": 0,
+        "indent": [2, 4]
     }
 };
