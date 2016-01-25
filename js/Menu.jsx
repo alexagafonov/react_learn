@@ -22,10 +22,13 @@ class Menu extends Component {
 
     render() {
         return (
-            <ul className='menu'>{this.state.data.map(item => {return <li key={item.id} className={item.isActive=="true" ? 'active' : null}>
-            	<a href={item.link}>{item.name}</a>
-            	</li>})}</ul>
-        );
+            <ul className='menu'>{this.state.data.map(item => 
+                <li key={item.id} className={item.isActive=="true" ? 'active' : null}>
+            	   <a href={item.link}>{item.name}</a>
+            	</li>
+            )}
+            </ul>
+        )
     }
 }
 

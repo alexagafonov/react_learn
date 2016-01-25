@@ -14,17 +14,17 @@ class Tabs extends Component {
         this.setState({ currentTab: tab });
     }
     render() {
-        var self = this;
+        let self = this;
         return (
             <div className='tabs'>
                 <ul className='tabs__header'>
-                    {this.props.headers.map(function(li, i) {
+                    {this.props.headers.map((li, i) => {
                         return (
                             <TabItem key={i} handleClick={self.handleClick.bind(this, i)} isCurrent={(self.state.currentTab === i)}>{li}</ TabItem>
                         );
                     })}
                 </ul>
-                {this.props.children.map(function(div, i) {
+                {this.props.children.map((div, i) => {
                     return (
                         <ContentItem key={i} isCurrent={(self.state.currentTab === i)}>{div}</ ContentItem>
                     );

@@ -30,13 +30,35 @@ class FriendsList extends Component {
     }
 
     render() {
-        return <ul>{this.props.items.map(item => {return <li key={item.id} className={item.isEdit ? 'edit' : null}>
-            <span className='friend__name'>{item.newText ? item.newText : item.text}</span>
-            <Input onChange={this.editText} value={item.newText ? item.newText : item.text} className='editfield' elemId={item.id}/>
-        	<Button onClick={this.handleEdit} className='editbtn' txt='Edit Friend' elemId={item.id}/>
-            <Button onClick={this.handleSave} className='savebtn' txt='Save Friend'elemId={item.id}/>
-            <Button onClick={this.handleRemove} txt='Remove Friend' elemId={item.id} />
-            </li>})}</ul>;
+        return (
+            <ul>
+            {this.props.items.map(item => {
+                return (
+                    <li key={item.id} className={item.isEdit ? 'edit' : null}>
+                        <span className='friend__name'>{item.newText ? item.newText : item.text}</span>
+                        <Input 
+                            onChange={this.editText} 
+                            value={item.newText ? item.newText : item.text} 
+                            className='editfield' 
+                            elemId={item.id}/>
+                        <Button 
+                            onClick={this.handleEdit} 
+                            className='editbtn' 
+                            txt='Edit Friend' 
+                            elemId={item.id}/>
+                        <Button 
+                            onClick={this.handleSave} 
+                            className='savebtn' 
+                            txt='Save Friend'
+                            elemId={item.id}/>
+                        <Button 
+                            onClick={this.handleRemove} 
+                            txt='Remove Friend' 
+                            elemId={item.id} />
+                    </li>
+            )})}
+            </ul>
+        )
     }
 }
 
