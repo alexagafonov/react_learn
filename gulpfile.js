@@ -4,14 +4,15 @@ const browserify = require('browserify');
 const babelify = require('babelify');
 const connect = require('gulp-connect');
 const source = require('vinyl-source-stream');
+const eslint = require('eslint/lib/cli');
 
-gulp.task('connect', function() {
+gulp.task('connect', () => {
     connect.server({
         port: 8888
     });
 });
 
-gulp.task('build', function() {
+gulp.task('build', () => {
     browserify({
         entries: 'js/index.jsx',
         extensions: ['.jsx'],
@@ -23,6 +24,13 @@ gulp.task('build', function() {
         .bundle()
         .pipe(source('bundle.js'))
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('lint', done => {
+
+    eslint.execute('--ext .js,.jsx .');
+    done();
+
 });
 
 gulp.task('default', ['build', 'connect']);

@@ -40,7 +40,7 @@ class FriendsApp extends Component {
         this.state.items.forEach(item => {
             if (Number(item.id) === Number(e.target.dataset.elemid)) {
                 item.isEdit = true;
-            };
+            }
             newData.push(item);
         });
         this.setState({items: newData});
@@ -51,7 +51,7 @@ class FriendsApp extends Component {
         this.state.items.forEach(item => {
             if (Number(item.id) === Number(e.target.dataset.elemid)) {
                 item.isEdit = false;
-            };
+            }
             newData.push(item);
         });
         this.setState({items: newData});
@@ -63,7 +63,7 @@ class FriendsApp extends Component {
             if (Number(item.id) === Number(e.target.dataset.elemid)) {
                 item.newText = e.target.value;
                 item.text = '';
-            };
+            }
             newData.push(item);
         });
         this.setState({items: newData});
