@@ -9,9 +9,17 @@ module.exports = {
     "env": {
         "es6": true
     },
+    "plugins": [
+        "react"
+    ],
     "rules": {
         "strict": 0,
-        "no-unused-vars": 0,
-        "indent": [2, 4]
+        "no-param-reassign": 0,
+        "react/jsx-indent": 2,
+        "react/jsx-no-bind": [2, {
+            "ignoreRefs": true,
+            "allowArrowFunctions": true,
+            "allowBind": true
+        }]
     }
 };

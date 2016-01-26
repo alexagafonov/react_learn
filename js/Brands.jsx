@@ -5,9 +5,9 @@ import Select from './Select';
 
 class Brands extends Component {
     render() {
-        return (
-            <Select list={['Audi', 'BMW', 'Dodge', 'Ford', 'Nissan']} />
-        );
+      return (
+          <Select className="tab__form__select" list={['Audi', 'BMW', 'Dodge', 'Ford', 'Nissan']} />
+      );
     }
 }
 
